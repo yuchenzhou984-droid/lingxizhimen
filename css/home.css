@@ -1,0 +1,328 @@
+/* ========== 视频背景 ========== */
+
+.bg-video {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  transition: opacity 1.2s ease;
+}
+
+.bg-image {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  opacity: 0;
+  transition: opacity 1.5s ease;
+}
+
+.bg-image-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ========== 金光过渡特效 ========== */
+
+.golden-flash {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  pointer-events: none;
+  opacity: 0;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(255, 220, 160, 0.6) 0%,
+    rgba(232, 180, 100, 0.3) 30%,
+    rgba(200, 150, 60, 0.1) 60%,
+    transparent 100%
+  );
+}
+
+.golden-flash.active {
+  animation: goldenPulse 2s ease-out forwards;
+}
+
+@keyframes goldenPulse {
+  0%   { opacity: 0; }
+  15%  { opacity: 1; }
+  60%  { opacity: 0.6; }
+  100% { opacity: 0; }
+}
+
+/* ========== 声音开关 ========== */
+
+.sound-toggle {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 100;
+  display: flex;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  -webkit-tap-highlight-color: transparent;
+  padding: 0;
+}
+
+.sound-icon {
+  width: 56px;
+  height: 56px;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.sound-toggle.muted .sound-icon {
+  opacity: 0.6;
+}
+
+.sound-tip {
+  position: absolute;
+  bottom: 54px;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  font-size: 10px;
+  color: rgba(200,180,220,0.7);
+  font-family: var(--font-sans);
+  letter-spacing: 0.04em;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.sound-toggle:active .sound-tip,
+.sound-toggle:hover .sound-tip {
+  opacity: 1;
+}
+
+/* ========== 首页容器 ========== */
+
+.page-home-outer {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  pointer-events: none;
+}
+
+.page-home-outer .home-entry {
+  pointer-events: auto;
+}
+
+/* ========== 首页UI ========== */
+
+.home-ui {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--space-xl) var(--space-md);
+  width: 100%;
+}
+
+.home-ui .ritual-title {
+  font-family: var(--font-serif);
+  font-size: 2.4rem;
+  letter-spacing: 0.15em;
+  color: var(--accent-gold);
+  text-shadow:
+    0.5px 0.5px 0 rgba(0,0,0,0.5),
+    1px 1px 0 rgba(0,0,0,0.3),
+    0 0 12px rgba(0,0,0,0.7);
+  margin-bottom: var(--space-md);
+  opacity: 0;
+  margin-top: 24px;
+  transition: opacity 1s ease, margin-top 1s ease;
+}
+
+.home-ui .ritual-title.visible {
+  opacity: 1;
+  margin-top: 0;
+}
+
+.home-ui .ritual-subtitle {
+  font-family: 'Playfair Display', var(--font-serif);
+  font-size: 1.2rem;
+  font-style: italic;
+  letter-spacing: 0.04em;
+  margin-bottom: var(--space-2xl);
+  text-shadow: 0 1px 8px rgba(0,0,0,0.6);
+  opacity: 0;
+  margin-top: 24px;
+  transition: opacity 1s ease 0.3s, margin-top 1s ease 0.3s;
+  color: var(--accent-gold);
+}
+
+.home-ui .ritual-subtitle.visible {
+  opacity: 1;
+  margin-top: 0;
+}
+
+/* ========== 卡片组 ========== */
+
+.ritual-entries {
+  display: flex;
+  flex-direction: row;
+  gap: var(--space-md);
+  width: 100%;
+  max-width: 420px;
+  perspective: 1200px;
+  justify-content: center;
+}
+
+.ritual-entries .home-entry {
+  opacity: 0;
+  margin-top: 24px;
+  aspect-ratio: 1;
+  min-height: 0;
+  padding: var(--space-md);
+  max-width: clamp(100px, 30vw, 130px);
+}
+
+.ritual-entries .home-entry:nth-child(1) { transition: opacity 0.7s ease 0.3s, margin-top 0.7s ease 0.3s, box-shadow 0.3s ease; }
+.ritual-entries .home-entry:nth-child(2) { transition: opacity 0.7s ease 0.55s, margin-top 0.7s ease 0.55s, box-shadow 0.3s ease; }
+.ritual-entries .home-entry:nth-child(3) { transition: opacity 0.7s ease 0.8s, margin-top 0.7s ease 0.8s, box-shadow 0.3s ease; }
+
+.ritual-entries .home-entry.visible {
+  opacity: 1;
+  margin-top: 0;
+}
+
+/* ========== 悬浮毛玻璃卡片 ========== */
+
+.home-entry {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-xs);
+  padding: var(--space-md);
+  background: rgba(232, 213, 183, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(232, 213, 183, 0.18);
+  border-radius: var(--radius-md);
+  color: var(--text-primary);
+  cursor: pointer;
+  width: 100%;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  -webkit-tap-highlight-color: transparent;
+  box-shadow:
+    0 4px 24px rgba(30, 20, 10, 0.25),
+    inset 0 1px 0 rgba(232, 213, 183, 0.08);
+}
+
+.home-entry:hover {
+  border-color: rgba(232, 213, 183, 0.25);
+  box-shadow:
+    0 8px 32px rgba(40, 30, 15, 0.35),
+    inset 0 1px 0 rgba(232, 213, 183, 0.12);
+}
+
+.home-entry:active {
+  border-color: rgba(232, 213, 183, 0.35);
+  background: rgba(232, 213, 183, 0.12);
+  transform: scale(0.97);
+}
+
+.entry-icon {
+  font-size: clamp(1rem, 3vw, 1.3rem);
+  color: #e8d5b7;
+  transition: color 0.3s ease;
+}
+
+.home-entry:hover .entry-icon {
+  color: #faf5ed;
+}
+
+.entry-label {
+  font-family: var(--font-serif);
+  font-size: clamp(0.85rem, 2.5vw, 1.15rem);
+  color: #f0e0c8;
+  letter-spacing: 0.06em;
+  text-align: center;
+  line-height: 1.2;
+  transition: color 0.3s ease;
+}
+
+.home-entry:hover .entry-label {
+  color: #faf5ed;
+}
+
+.entry-desc {
+  font-size: clamp(0.55rem, 1.6vw, 0.78rem);
+  color: rgba(232, 213, 183, 0.6);
+  text-align: center;
+  line-height: 1.2;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  transition: color 0.3s ease;
+}
+
+.home-entry:hover .entry-desc {
+  color: rgba(232, 213, 183, 0.9);
+}
+
+/* ========== 响应式 ========== */
+
+@media (min-width: 768px) {
+  .home-ui .ritual-title { font-size: 3rem; }
+  .ritual-entries { max-width: 500px; gap: var(--space-lg); }
+  .ritual-entries .home-entry { max-width: 150px; }
+}
+
+/* ========== 返回按钮 ========== */
+
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 4px 0;
+  margin-bottom: 8px;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.back-btn img {
+  width: 48px;
+  height: 48px;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.back-btn:active img {
+  opacity: 1;
+}
+
+.back-btn:active img {
+  opacity: 1;
+}
+
+.back-tip {
+  font-size: 12px;
+  color: rgba(200,180,220,0.6);
+  font-family: var(--font-sans);
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+  opacity: 0.7;
+
+.back-btn:active img {
+  opacity: 1;
+}

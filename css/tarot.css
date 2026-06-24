@@ -1,0 +1,541 @@
+/* ========== 塔罗页 ========== */
+
+.tarot-header {
+  text-align: center;
+  margin-bottom: var(--space-md);
+}
+
+.tarot-title {
+  font-size: 1.4rem;
+  letter-spacing: 0.1em;
+  margin-bottom: var(--space-sm);
+}
+
+.tarot-subtitle {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+/* 牌阵选择 */
+.spread-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.spread-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: var(--space-lg);
+  background: rgba(30, 18, 50, 0.7);
+  border: 1px solid rgba(232,213,183,0.1);
+  border-radius: var(--radius-md);
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  -webkit-tap-highlight-color: transparent;
+  width: 100%;
+  text-align: center;
+}
+
+.spread-card:active {
+  border-color: var(--accent-gold);
+  background: rgba(232,213,183,0.04);
+  transform: scale(0.98);
+}
+
+.spread-icon {
+  font-size: 1.2rem;
+  color: var(--accent-gold);
+  margin-bottom: var(--space-sm);
+}
+
+.spread-name {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  color: var(--accent-gold);
+  letter-spacing: 0.06em;
+}
+
+.spread-desc {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.spread-hint {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  opacity: 0.7;
+  margin-top: var(--space-sm);
+  line-height: 1.6;
+}
+
+/* ========== 横向滚动牌列 ========== */
+
+/* ========== 洗牌圈 ========== */
+
+.shuffle-stage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: var(--space-xl) 0;
+}
+
+.shuffle-ring {
+  position: relative;
+  width: 0;
+  height: 0;
+  margin: 180px 0;
+  animation: ringRotate 8s linear infinite;
+}
+
+@keyframes ringRotate {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+.shuffle-card {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 44px;
+  height: 66px;
+  margin-left: -22px;
+  margin-top: -33px;
+  background: url('../塔罗背景图.png') center / cover no-repeat;
+  border: 1px solid rgba(232,213,183,0.2);
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translate(var(--sx), var(--sy)) rotate(var(--sa));
+  animation: shuffleCardAppear 0.4s ease-out forwards;
+  opacity: 0;
+}
+
+@keyframes shuffleCardAppear {
+  0%   { opacity: 0; transform: translate(var(--sx), var(--sy)) rotate(var(--sa)) scale(0.3); }
+  100% { opacity: 1; transform: translate(var(--sx), var(--sy)) rotate(var(--sa)) scale(1); }
+}
+
+.shuffle-card-icon {
+  font-size: 0.7rem;
+  color: var(--accent-gold);
+  opacity: 0.4;
+}
+
+.shuffle-hint {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  margin-top: 48px;
+  animation: hintPulse 1.5s ease-in-out infinite;
+}
+
+@keyframes hintPulse {
+  0%, 100% { opacity: 0.4; }
+  50%      { opacity: 0.8; }
+}
+
+/* ========== 横向滚动牌列 ========== */
+
+.deck-scroll-wrapper {
+  margin: var(--space-lg) calc(-1 * var(--space-md));
+  overflow: hidden;
+}
+
+.deck-scroll-track {
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: var(--space-md);
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.deck-scroll-track::-webkit-scrollbar {
+  display: none;
+}
+
+.deck-card {
+  flex-shrink: 0;
+  width: 58px;
+  height: 88px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  -webkit-tap-highlight-color: transparent;
+  background: url('../塔罗背景图.png') center / cover no-repeat;
+  border: 1px solid rgba(232,213,183,0.15);
+}
+
+.deck-card-dealing {
+  opacity: 0;
+  transform: translateY(-30px) scale(0.8);
+  animation: cardDealIn 0.5s ease-out forwards;
+}
+
+@keyframes cardDealIn {
+  0%   { opacity: 0; transform: translateY(-30px) scale(0.8); }
+  60%  { opacity: 0.8; transform: translateY(3px) scale(1.02); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.deck-card:active {
+  transform: scale(0.93);
+}
+
+.deck-card-inner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  padding: 4px;
+}
+
+.deck-card-back-icon {
+  font-size: 1rem;
+  color: var(--accent-gold);
+  opacity: 0.35;
+}
+
+.deck-card-selected {
+  border-color: var(--accent-gold);
+  background: url('../塔罗背景图.png') center / cover no-repeat;
+  box-shadow: 0 0 8px rgba(232,213,183,0.08);
+}
+
+.deck-card-symbol {
+  font-size: 0.85rem;
+  color: var(--accent-gold);
+}
+
+.deck-card-name {
+  font-family: var(--font-serif);
+  font-size: 0.5rem;
+  color: var(--accent-gold);
+  text-align: center;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+}
+
+.deck-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 3px;
+}
+
+@media (min-width: 768px) {
+  .deck-card {
+    width: 68px;
+    height: 102px;
+  }
+
+  .deck-card-name {
+    font-size: 0.6rem;
+  }
+}
+
+/* ========== 牌阵卡牌展示区 ========== */
+
+.selected-area {
+  margin-top: var(--space-lg);
+  min-height: 20px;
+}
+
+/* 牌阵布局 */
+.spread-layout {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+  padding: var(--space-md) 0;
+}
+
+/* 三张牌：水平排列 */
+.spread-three {
+  gap: var(--space-lg);
+}
+
+/* 单张牌：居中 */
+.spread-single {
+  gap: 0;
+}
+
+/* 凯尔特十字：传统十字布局 */
+.spread-celtic {
+  display: grid;
+  grid-template-columns: 80px 80px 80px 80px 80px;
+  grid-template-rows: auto auto auto auto;
+  gap: 8px;
+  justify-content: center;
+  justify-items: center;
+}
+
+/* 根基 - 上方居中 */
+.spread-celtic .spread-slot:nth-child(3) { grid-column: 2 / 5; grid-row: 1; }
+
+/* 近期过去(左) | 核心区(中) | 近期未来(右)，左右等距 */
+.spread-celtic .spread-slot:nth-child(5) { grid-column: 1; grid-row: 2; align-self: center; }
+.spread-celtic .spread-slot:nth-child(1) { grid-column: 3; grid-row: 2; z-index: 0; }
+.spread-celtic .spread-slot:nth-child(2) {
+  grid-column: 3; grid-row: 2; z-index: 1;
+  margin-top: 50px; margin-left: 30px;
+}
+.spread-celtic .spread-slot:nth-child(6) { grid-column: 5; grid-row: 2; align-self: center; }
+
+/* 遥远过去 - 下方居中 */
+.spread-celtic .spread-slot:nth-child(4) { grid-column: 2 / 5; grid-row: 3; }
+
+/* 底部牌柱：从左到右 7, 8, 9, 10 */
+.spread-celtic .spread-slot:nth-child(7)  { grid-column: 1; grid-row: 4; }
+.spread-celtic .spread-slot:nth-child(8)  { grid-column: 2; grid-row: 4; }
+.spread-celtic .spread-slot:nth-child(9)  { grid-column: 4; grid-row: 4; }
+.spread-celtic .spread-slot:nth-child(10) { grid-column: 5; grid-row: 4; }
+
+/* 阻碍牌(2)横置，牌名右侧竖向，标签左侧竖向 */
+.spread-celtic .spread-slot:nth-child(2) .spread-card-face {
+  width: 140px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.spread-celtic .spread-slot:nth-child(2) .spread-card-img {
+  width: auto;
+  height: 140px;
+  transform: rotate(90deg);
+}
+.spread-celtic .spread-slot:nth-child(2) .spread-card-title {
+  position: absolute;
+  right: -32px;
+  top: calc(50% - 14px);
+  transform: translateY(-50%);
+  writing-mode: vertical-rl;
+  margin-top: 0;
+}
+.spread-celtic .spread-slot:nth-child(2) .spread-card-pos-label {
+  position: absolute;
+  left: -32px;
+  top: calc(50% - 14px);
+  transform: translateY(-50%);
+  writing-mode: vertical-rl;
+  margin-top: 0;
+}
+.spread-celtic .spread-slot:nth-child(2) {
+  position: relative;
+}
+
+/* 关系牌阵：水平排列 */
+.spread-relationship {
+  gap: var(--space-sm);
+}
+
+/* 卡牌槽位 */
+.spread-slot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 塔罗牌面 */
+.spread-card-face {
+  width: 90px;
+  height: 140px;
+  background-color: var(--bg-card);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 1px solid rgba(232,213,183,0.2);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.spread-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 8px 6px;
+  text-align: center;
+  animation: cardReveal 0.5s ease-out;
+}
+
+@keyframes cardReveal {
+  0%   { opacity: 0; transform: scale(0.85) translateY(8px); }
+  100% { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.spread-card-symbol {
+  display: none;
+}
+
+.spread-card-title {
+  font-family: var(--font-serif);
+  font-size: 0.75rem;
+  color: var(--accent-gold);
+  letter-spacing: 0.05em;
+  text-align: center;
+  margin-bottom: 4px;
+}
+
+.spread-card-keyword {
+  display: none;
+}
+
+.spread-card-pos-label {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--accent-purple);
+  letter-spacing: 0.06em;
+  margin-top: 4px;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .spread-card-face {
+    width: 110px;
+    height: 170px;
+    padding: 12px 8px;
+    gap: 6px;
+  }
+
+  .spread-card-symbol {
+    font-size: 2rem;
+  }
+
+  .spread-card-title {
+    font-size: 0.9rem;
+  }
+
+  .spread-card-pos-label {
+    font-size: 0.7rem;
+  }
+}
+
+/* ========== 解读完成按钮 ========== */
+
+.draw-complete {
+  text-align: center;
+  margin-top: var(--space-lg);
+  animation: fadeIn 0.5s ease;
+}
+
+/* ========== 整体解读 ========== */
+
+.card-reading {
+  margin-top: var(--space-md);
+}
+
+.overall-reading {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: all 0.6s ease;
+}
+
+.overall-reading.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.overall-title {
+  text-align: center;
+  font-size: 1.2rem;
+  letter-spacing: 0.08em;
+  margin-bottom: var(--space-md);
+}
+
+.overall-text {
+  font-size: 0.95rem;
+  line-height: 2;
+  white-space: pre-line;
+}
+
+/* ========== 单张牌解读双栏布局 ========== */
+
+.single-reading-layout {
+  display: flex;
+  gap: var(--space-lg);
+  align-items: center;
+  margin-bottom: var(--space-lg);
+}
+
+.single-card-left {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.single-card-name {
+  font-family: var(--font-serif);
+  font-size: 0.9rem;
+  color: var(--accent-gold);
+  letter-spacing: 0.06em;
+}
+
+.single-card-face {
+  width: 120px;
+  height: 187px;
+  overflow: hidden;
+}
+
+.single-card-face:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  z-index: 10;
+  position: relative;
+}
+
+.single-card-face .spread-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.single-card-right {
+  flex: 1;
+  min-width: 0;
+}
+
+.single-card-right .card {
+  margin-bottom: 0;
+}
+
+@media (max-width: 480px) {
+  .single-reading-layout {
+    flex-direction: column;
+    align-items: center;
+  }
+  .single-card-face {
+    width: 100px;
+    height: 156px;
+  }
+}
+
+.reading-closing {
+  text-align: right;
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  font-style: italic;
+  margin-top: var(--space-md);
+}
+
+.fade-in {
+  animation: fadeIn var(--transition-slow) ease;
+}

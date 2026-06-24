@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="灵汐之门 - 探索你的女巫能量，打造专属魔杖，塔罗占卜">
+  <meta name="theme-color" content="#0D0D1A">
+  <title>灵汐之门</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/test.css">
+  <link rel="stylesheet" href="css/tarot.css">
+</head>
+<body>
+
+  <video autoplay muted playsinline id="bgVideo" class="bg-video">
+    <source src="第二版.mp4" type="video/mp4">
+  </video>
+
+  <audio id="bgAudio" preload="auto" muted>
+    <source src="fadeout_4.0s_transition.wav" type="audio/wav">
+  </audio>
+
+  <div class="bg-image" id="bgImage">
+    <img src="背景.webp" alt="" class="bg-image-img" />
+  </div>
+
+  <div class="golden-flash" id="goldenFlash"></div>
+
+  <button class="sound-toggle" id="soundToggle" title="开启声音">
+    <img src="小喇叭.PNG" alt="声音" class="sound-icon" />
+  </button>
+
+  <!-- 首页（独立于app之外） -->
+  <div id="page-home" class="page-home-outer">
+    <div class="home-ui">
+      <h1 class="ritual-title letterpress">靈汐之門</h1>
+      <p class="ritual-subtitle">Open the door and discover another side of you</p>
+      <div class="ritual-entries" id="ritualEntries">
+        <button class="home-entry engraved-border" onclick="navigateTo('test1')">
+          <span class="entry-icon">◆</span>
+          <span class="entry-label typewriter-text-cn">能量测试</span>
+          <span class="entry-desc">发现你的女巫类型</span>
+        </button>
+        <button class="home-entry engraved-border" onclick="navigateTo('test2')">
+          <span class="entry-icon">⚒</span>
+          <span class="entry-label typewriter-text-cn">魔杖定制</span>
+          <span class="entry-desc">打造你的专属魔杖</span>
+        </button>
+        <button class="home-entry engraved-border" onclick="navigateTo('tarot')">
+          <span class="entry-icon">◇</span>
+          <span class="entry-label typewriter-text-cn">塔罗占卜</span>
+          <span class="entry-desc">聆听牌面的低语</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div id="app" style="display:none">
+
+    <button class="back-btn" id="globalBackBtn" onclick="navigateTo('home')">
+      <img src="返回.webp" alt="返回">
+      <span class="back-tip">返回首页</span>
+    </button>
+
+    <section class="page" id="page-test1">
+      <div id="test1Container"></div>
+    </section>
+
+    <section class="page" id="page-test2">
+      <div id="test2Container"></div>
+    </section>
+
+    <section class="page" id="page-tarot">
+      <div id="tarotContainer"></div>
+    </section>
+
+  </div>
+
+  <script src="js/data/witch-types.js"></script>
+  <script src="js/data/test-questions.js"></script>
+  <script src="js/data/wand-data.js"></script>
+  <script src="js/data/tarot-cards.js"></script>
+  <script src="js/router.js"></script>
+  <script src="js/test-engine.js"></script>
+  <script src="js/tarot-engine.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

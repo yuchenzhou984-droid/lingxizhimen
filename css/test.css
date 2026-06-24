@@ -1,0 +1,272 @@
+/* ========== 测试页 ========== */
+
+.test-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: var(--space-sm);
+}
+
+.test-title {
+  color: var(--accent-gold);
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  letter-spacing: 0.08em;
+}
+
+.test-counter {
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+}
+
+.test-question-card {
+  padding: var(--space-lg);
+  margin-bottom: var(--space-md);
+  background: rgba(40, 28, 65, 0.6);
+}
+
+.question-tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  color: var(--accent-purple);
+  border: 0.5px solid var(--accent-purple);
+  padding: 2px 10px;
+  border-radius: var(--radius-pill);
+  margin-bottom: var(--space-md);
+  letter-spacing: 0.06em;
+}
+
+.question-text {
+  font-size: 1rem;
+  line-height: 1.9;
+  margin-bottom: var(--space-lg);
+  color: var(--text-primary);
+}
+
+.options-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.option-letter {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border: 1px solid rgba(232,213,183,0.25);
+  border-radius: 50%;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--accent-gold-dim);
+  margin-right: var(--space-sm);
+  flex-shrink: 0;
+  transition: all var(--transition-fast);
+}
+
+.option-btn.selected .option-letter {
+  background: rgba(232,213,183,0.12);
+  border-color: var(--accent-gold);
+  color: var(--accent-gold);
+}
+
+.option-text {
+  flex: 1;
+}
+
+/* ========== 女巫结果双栏布局 ========== */
+
+.witch-result-top {
+  display: flex;
+  gap: var(--space-lg);
+  align-items: center;
+  margin-bottom: var(--space-lg);
+}
+
+.witch-result-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.witch-result-image {
+  flex-shrink: 0;
+  width: 45%;
+  max-width: 220px;
+}
+
+.witch-result-image img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(232, 213, 183, 0.15);
+}
+
+@media (max-width: 480px) {
+  .witch-result-top {
+    flex-direction: column-reverse;
+  }
+  .witch-result-image {
+    width: 60%;
+    max-width: 180px;
+  }
+}
+
+.result-page {
+  animation: fadeIn var(--transition-slow) ease;
+}
+
+.result-header {
+  text-align: center;
+  padding: var(--space-xl) 0 var(--space-lg);
+  border-bottom: 1px solid;
+  margin-bottom: var(--space-lg);
+}
+
+.result-element-icon {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: var(--space-md);
+}
+
+.result-type-name {
+  font-size: 2rem;
+  letter-spacing: 0.1em;
+  margin-bottom: var(--space-sm);
+}
+
+.result-element {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+}
+
+.result-keywords {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-lg);
+}
+
+.keyword-tag {
+  padding: 6px 18px;
+  border: 1px solid rgba(232,213,183,0.2);
+  border-radius: var(--radius-pill);
+  font-size: 0.85rem;
+  color: var(--accent-gold);
+  letter-spacing: 0.04em;
+}
+
+.result-section {
+  margin-bottom: var(--space-md);
+}
+
+.result-section h3 {
+  font-size: 1.1rem;
+  margin-bottom: var(--space-sm);
+}
+
+.philosophy-quote {
+  border-left: 2px solid var(--accent-gold-dim);
+  padding-left: var(--space-md);
+  margin: var(--space-md) 0;
+  color: var(--accent-gold);
+  font-family: var(--font-serif);
+  font-style: italic;
+  letter-spacing: 0.04em;
+  line-height: 1.8;
+}
+
+.magic-list {
+  list-style: none;
+  padding: 0;
+}
+
+.magic-list li {
+  padding: var(--space-sm) 0;
+  border-bottom: 0.5px solid rgba(232,213,183,0.06);
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+.magic-list li::before {
+  content: '· ';
+  color: var(--accent-gold-dim);
+}
+
+.result-actions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  margin-top: var(--space-xl);
+}
+
+/* ========== 魔杖结果 ========== */
+
+.wand-visual {
+  text-align: center;
+  padding: var(--space-xl) 0;
+}
+
+.wand-silhouette {
+  font-size: 4rem;
+  animation: wandGlow 3s ease-in-out infinite;
+}
+
+@keyframes wandGlow {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50%      { opacity: 1; transform: scale(1.05); }
+}
+
+.wand-title {
+  text-align: center;
+  font-size: 1.4rem;
+  letter-spacing: 0.1em;
+  margin-bottom: var(--space-lg);
+}
+
+.wand-material-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: var(--space-xs);
+}
+
+.material-label {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  letter-spacing: 0.06em;
+}
+
+.material-value {
+  font-family: var(--font-serif);
+  color: var(--accent-gold);
+  font-size: 1.1rem;
+  letter-spacing: 0.06em;
+}
+
+.material-desc {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+@media (min-width: 768px) {
+  .test-question-card {
+    padding: var(--space-xl);
+  }
+
+  .question-text {
+    font-size: 1.05rem;
+  }
+
+  .result-actions {
+    flex-direction: row;
+  }
+
+  .result-actions .btn {
+    flex: 1;
+  }
+}

@@ -1,0 +1,86 @@
+:root {
+  /* 背景 */
+  --bg-primary: #0D0D1A;
+  --bg-secondary: #1A1A2E;
+  --bg-card: #16213E;
+
+  /* 文字 */
+  --text-primary: #E0D8F0;
+  --text-secondary: #8B7FA8;
+  --text-accent: #E8D5B7;
+
+  /* 强调 */
+  --accent-purple: #9B59B6;
+  --accent-gold: #E8D5B7;
+  --accent-gold-dim: #A8986E;
+
+  /* 元素色 */
+  --fire: #E74C3C;
+  --fire-secondary: #F39C12;
+  --water: #3498DB;
+  --water-secondary: #1ABC9C;
+  --wind: #7D3C98;
+  --wind-secondary: #AF7AC5;
+  --earth: #27AE60;
+  --earth-secondary: #8BC34A;
+  --darkmoon: #6C3483;
+  --darkmoon-secondary: #283747;
+  --lightheal: #F1C40F;
+  --lightheal-secondary: #FDFEFE;
+
+  /* 字体 */
+  --font-serif: "Songti SC", "Noto Serif SC", "STSong", "SimSun", Georgia, serif;
+  --font-sans: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC", -apple-system, sans-serif;
+  --font-mono: "Courier Prime", "Special Elite", "SF Mono", "Cascadia Code", monospace;
+
+  /* 间距 */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+
+  /* 圆角 */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 24px;
+  --radius-pill: 999px;
+
+  /* 阴影 */
+  --shadow-card: 0 2px 12px rgba(0,0,0,0.4);
+  --shadow-gold: 0 0 1px rgba(232,213,183,0.3);
+
+  /* 过渡 */
+  --transition-fast: 200ms ease;
+  --transition-normal: 300ms ease;
+  --transition-slow: 600ms ease;
+}
+
+/* 打字机油墨效果 */
+.typewriter-text {
+  font-family: var(--font-mono);
+  letter-spacing: 0.05em;
+  text-shadow:
+    0.5px 0 0 rgba(232,213,183,0.15),
+    -0.5px 0 0 rgba(0,0,0,0.3);
+}
+
+.typewriter-text-cn {
+  font-family: var(--font-serif);
+  letter-spacing: 0.08em;
+  text-shadow:
+    0.5px 0.5px 0 rgba(232,213,183,0.1),
+    -0.3px -0.3px 0 rgba(0,0,0,0.25);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 断印效果 - 用于标题 */
+.letterpress {
+  position: relative;
+  color: var(--accent-gold);
+  text-shadow:
+    0.5px 0.5px 0 rgba(0,0,0,0.5),
+    1px 1px 0 rgba(0,0,0,0.3),
+    0 0 0.5px rgba(232,213,183,0.2);
+}
