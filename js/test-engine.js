@@ -127,7 +127,7 @@ const TestEngine = {
           <div class="witch-result-top">
             <div class="witch-result-info">
               <div class="result-header" style="border-color:${witch.color}">
-                <span class="result-element-icon">${witch.elementIcon}</span>
+                <span class="result-element-icon" style="color:${witch.color}">${witch.elementIcon}</span>
                 <h2 class="result-type-name" style="color:${witch.color}">${witch.name}</h2>
                 <p class="result-element">代表元素：${witch.element}</p>
               </div>
@@ -218,9 +218,9 @@ const TestEngine = {
             <span class="material-value">${wood.name}</span>
           </div>
           <p class="material-desc">${wood.desc}</p>
-        </div>
 
-        <div class="card engraved-border">
+          <div class="engraved-divider"></div>
+
           <div class="wand-material-row">
             <span class="material-label">核心</span>
             <span class="material-value">${energy.core}</span>

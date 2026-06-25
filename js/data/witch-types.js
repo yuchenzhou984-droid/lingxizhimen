@@ -62,7 +62,7 @@ const WITCH_TYPES = {
   darkmoon: {
     id: 'darkmoon',
     name: '暗月女巫',
-    element: '暗',
+    element: '月',
     elementIcon: '●',
     deity: '赫卡忒（Hecate）',
     deityDesc: '希腊神话中的魔法与十字路口女神，掌管夜晚、鬼魂与一切边界之地。她手持火炬站在十字路口，为迷途者照亮选择。',
@@ -71,8 +71,8 @@ const WITCH_TYPES = {
     philosophy: '不必强迫自己面向阳光。有些花只在夜间绽放，有些真相只在黑暗中浮现。你选择潜入深处，这本身就是一种勇敢。',
     philosophyDetail: '你不必假装一切都明亮美好。暗月女巫的使命是探索那些被忽视的真相，转化那些被压抑的能量。你的存在提醒世界：阴影里藏着礼物，黑暗中孕育着黎明。',
     magic: ['影子工作：通过冥想与书写，面对和转化内在的阴影面', '新月仪式：新月之夜设定意图，为新的周期种下种子', '驱散与净化：移除空间中滞留的负面能量', '深度冥想：进入意识深处，接收来自潜意识的指引'],
-    color: '#6C3483',
-    colorSecondary: '#283747'
+    color: '#8E5EA0',
+    colorSecondary: '#3D2E50'
   },
   lightheal: {
     id: 'lightheal',

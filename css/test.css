@@ -92,8 +92,7 @@
 
 .witch-result-image {
   flex-shrink: 0;
-  width: 45%;
-  max-width: 220px;
+  width: 50%;
 }
 
 .witch-result-image img {
@@ -105,11 +104,10 @@
 
 @media (max-width: 480px) {
   .witch-result-top {
-    flex-direction: column-reverse;
+    flex-direction: column;
   }
   .witch-result-image {
-    width: 60%;
-    max-width: 180px;
+    width: 80%;
   }
 }
 
@@ -235,9 +233,10 @@
 }
 
 .material-label {
-  font-size: 0.85rem;
-  color: var(--text-secondary);
+  font-size: 1.1rem;
+  color: var(--accent-gold);
   letter-spacing: 0.06em;
+  font-family: var(--font-serif);
 }
 
 .material-value {
@@ -249,7 +248,7 @@
 
 .material-desc {
   font-size: 0.9rem;
-  color: var(--text-secondary);
+  color: var(--text-primary);
   line-height: 1.7;
 }
 

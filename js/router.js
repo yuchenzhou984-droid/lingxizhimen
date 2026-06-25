@@ -20,29 +20,33 @@ window.navigateTo = function(page, data) {
   }
 
   if (page === 'home') {
+    var video = document.getElementById('bgVideo');
+    var bgImage = document.getElementById('bgImage');
+
+    if (video && typeof homeInitialized !== 'undefined' && homeInitialized) {
+      video.style.display = 'none';
+      var audioHome = document.getElementById('bgAudio');
+      if (audioHome) { audioHome.pause(); audioHome.currentTime = 0; }
+      if (bgImage) { bgImage.style.display = 'block'; bgImage.style.opacity = '1'; }
+      if (homePage) homePage.style.display = 'flex';
+      if (app) app.style.display = 'none';
+      if (btn) btn.style.display = 'flex';
+      if (backBtn) backBtn.style.display = 'none';
+      if (typeof showHomeUI === 'function') showHomeUI();
+      window.scrollTo({ top: 0 });
+      return;
+    }
+
     if (video) { video.style.display = 'block'; video.style.opacity = '1'; }
-    var bgImageHome = document.getElementById('bgImage');
-    if (bgImageHome) bgImageHome.style.display = 'block';
     if (homePage) homePage.style.display = 'flex';
     if (app) app.style.display = 'none';
     if (btn) btn.style.display = 'flex';
     if (backBtn) backBtn.style.display = 'none';
+    if (bgImage) bgImage.style.opacity = '0';
 
-    var video = document.getElementById('bgVideo');
-    var bgImage = document.getElementById('bgImage');
-    if (video && typeof homeInitialized !== 'undefined' && homeInitialized) {
-      video.pause();
-      var audioHome = document.getElementById('bgAudio');
-      if (audioHome) audioHome.pause();
-      video.style.opacity = '0';
-      if (bgImage) bgImage.style.opacity = '1';
-      if (typeof showHomeUI === 'function') showHomeUI();
-      /* audio handled by separate track */
-    } else if (video) {
+    if (video) {
       video.currentTime = 0;
       var audio = document.getElementById('bgAudio');
-      video.style.opacity = '1';
-      if (bgImage) bgImage.style.opacity = '0';
       if (audio) { audio.currentTime = 0; audio.play().catch(function() {}); }
       if (typeof hideHomeUI === 'function') hideHomeUI();
     }
