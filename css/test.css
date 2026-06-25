@@ -209,8 +209,8 @@
 }
 
 .wand-silhouette {
-  font-size: 4rem;
-  animation: wandGlow 3s ease-in-out infinite;
+  font-size: 3rem;
+  color: var(--accent-gold);
 }
 
 @keyframes wandGlow {

@@ -207,7 +207,7 @@ const TestEngine = {
       
       <div class="result-page">
         <div class="wand-visual">
-          <div class="wand-silhouette">✨</div>
+          <div class="wand-silhouette">★</div>
         </div>
 
         <h2 class="wand-title typewriter-text-cn">你的专属魔杖</h2>
