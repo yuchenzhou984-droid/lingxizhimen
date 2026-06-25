@@ -518,6 +518,11 @@
 }
 
 @media (max-width: 480px) {
+  .spread-celtic {
+    grid-template-columns: 52px 52px 52px 52px 52px;
+    gap: 4px;
+  }
+
   .single-reading-layout {
     flex-direction: column;
     align-items: center;
