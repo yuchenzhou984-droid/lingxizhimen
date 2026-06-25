@@ -111,6 +111,8 @@ function hideHomeUI() {
 }
 
 function setupCardTilt() {
+  if (window.matchMedia('(max-width: 767px)').matches) return;
+
   var cards = document.querySelectorAll('.ritual-entries .home-entry');
   var title = document.querySelector('.ritual-title');
   var subtitle = document.querySelector('.ritual-subtitle');
