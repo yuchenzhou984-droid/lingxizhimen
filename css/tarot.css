@@ -240,8 +240,6 @@
   gap: 8px;
   justify-content: center;
   justify-items: center;
-  overflow-x: auto;
-  max-width: 100%;
 }
 
 @media (min-width: 768px) {
