@@ -136,7 +136,7 @@ const TestEngine = {
               </div>
             </div>
             <div class="witch-result-image">
-              <img src="女巫画像/${witch.name}.png" alt="${witch.name}" />
+              <img src="女巫画像/${witch.name}.webp" alt="${witch.name}" />
             </div>
           </div>
 

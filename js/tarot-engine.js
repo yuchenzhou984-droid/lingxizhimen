@@ -357,7 +357,7 @@ const TarotEngine = {
   getCardImage(card) {
     var folder = 'Rider-Waite-Smith tarot/';
     if (card.id !== undefined) {
-      return folder + card.id + card.name + '.png';
+      return folder + card.id + card.name + '.webp';
     }
     var suit = card.suit;
     var rank = card.rank;
@@ -366,7 +366,7 @@ const TarotEngine = {
       '6': '6', '7': '7', '8': '8', '9': '9', '10': '10',
       'Page': '侍从', 'Knight': '骑士', 'Queen': '王后', 'King': '国王'
     };
-    return folder + suit + (rankMap[rank] || '') + '.png';
+    return folder + suit + (rankMap[rank] || '') + '.webp';
   },
 
   getCardImageUrl(card) {
