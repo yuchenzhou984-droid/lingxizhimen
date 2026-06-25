@@ -15,7 +15,7 @@ html {
 
 body {
   font-family: var(--font-sans);
-  background: url('../背景2.webp') center / cover no-repeat fixed;
+  background: #0a0608;
   color: var(--text-primary);
   line-height: 1.7;
   min-height: 100vh;
