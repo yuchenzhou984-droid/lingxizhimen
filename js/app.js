@@ -89,7 +89,7 @@ function showHomeUI() {
   var flash = document.getElementById('goldenFlash');
 
   if (video) video.style.opacity = '0';
-  if (bgImage) bgImage.style.opacity = '1';
+  if (bgImage) { bgImage.style.display = 'block'; bgImage.style.opacity = '1'; }
   if (flash) { flash.classList.remove('active'); void flash.offsetWidth; flash.classList.add('active'); }
   if (title) title.classList.add('visible');
   if (subtitle) subtitle.classList.add('visible');
@@ -104,7 +104,7 @@ function hideHomeUI() {
   var bgImage = document.getElementById('bgImage');
 
   if (video) video.style.opacity = '1';
-  if (bgImage) bgImage.style.opacity = '0';
+  if (bgImage) { bgImage.style.display = 'none'; bgImage.style.opacity = '0'; }
   if (title) title.classList.remove('visible');
   if (subtitle) subtitle.classList.remove('visible');
   entries.forEach(function(e) { e.classList.remove('visible'); });
