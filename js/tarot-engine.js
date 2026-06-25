@@ -134,9 +134,19 @@ const TarotEngine = {
       </div>
     `;
 
+    var self = this;
     setTimeout(() => {
-      this.renderDrawStage();
+      self.renderDrawStage();
     }, 2800);
+
+    var preloadDiv = document.createElement('div');
+    preloadDiv.style.display = 'none';
+    this.allCards.forEach(function(card) {
+      var img = new Image();
+      img.src = self.getCardImage(card);
+      preloadDiv.appendChild(img);
+    });
+    container.appendChild(preloadDiv);
   },
 
   renderDrawStage() {
