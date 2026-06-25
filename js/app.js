@@ -56,6 +56,24 @@ function setupVideo() {
     return;
   }
 
+  var fadeDone = false;
+  video.addEventListener('timeupdate', function() {
+    if (!video.duration) return;
+    var remaining = video.duration - video.currentTime;
+    var audio = document.getElementById('bgAudio');
+    if (remaining < 2.5 && !fadeDone && audio) {
+      audio.volume = Math.max(0, (remaining - 0.3) / 2.2);
+    }
+    if (remaining < 0.2) {
+      fadeDone = true;
+      if (audio) audio.volume = 0;
+    }
+    if (video.currentTime < 0.1) {
+      fadeDone = false;
+      if (audio) audio.volume = 1;
+    }
+  });
+
   video.addEventListener('ended', () => {
     homeInitialized = true;
     showHomeUI();
