@@ -250,3 +250,13 @@ h3 { font-size: 1.15rem; letter-spacing: 0.04em; }
 
 /* 隐藏 */
 .hidden { display: none !important; }
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background: url('../背景2.webp') center / cover no-repeat fixed;
+  opacity: 0.5;
+  pointer-events: none;
+}
