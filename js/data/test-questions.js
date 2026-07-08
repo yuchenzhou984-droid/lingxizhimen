@@ -4,10 +4,10 @@ const TEST1_QUESTIONS = [
     type: 'situational',
     text: '深夜，你走进一座被遗忘的古老森林。月光从枝叶间洒下银色的碎片，四周阴影渐浓，脚下的路在消失。你的第一反应是？',
     options: [
-      { text: '点火把，大步深入。', scores: { fire: 2, wind: 1 } },
-      { text: '闭眼倾听，让直觉带路。', scores: { water: 2, darkmoon: 1 } },
-      { text: '手掌贴着古树，让森林告诉你答案。', scores: { earth: 2, water: 1 } },
-      { text: '送出温润的光，先让脚下安全。', scores: { lightheal: 2, earth: 1 } }
+      { text: '点火把，径直深入。森林不会等犹豫的人。', scores: { fire: 2, wind: 1 } },
+      { text: '停在原地闭眼。用耳朵和皮肤去感受周围。', scores: { water: 2, darkmoon: 1 } },
+      { text: '蹲下来观察足迹和断枝，分析最安全的路径。', scores: { wind: 2, earth: 1 } },
+      { text: '找一棵最老的树靠着坐下，让森林能量流过身体。', scores: { earth: 2, water: 1 } }
     ]
   },
   {
