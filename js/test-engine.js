@@ -236,17 +236,6 @@ const TestEngine = {
           <p class="material-desc">${energy.decorationDesc}</p>
         </div>
 
-        <div class="card engraved-border">
-          <h3>制作方法</h3>
-          <p>${energy.method}</p>
-        </div>
-
-        <div class="card engraved-border">
-          <h3>魔杖形态</h3>
-          <p><strong>${energy.length}</strong></p>
-          <p>${energy.lengthDesc}</p>
-        </div>
-
         <div class="card engraved-border result-section">
           <h3>魔杖特质 · ${traitTitle}</h3>
           <p>${energy.traitDesc}</p>
