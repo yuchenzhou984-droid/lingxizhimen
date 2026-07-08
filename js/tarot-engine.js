@@ -102,7 +102,9 @@ const TarotEngine = {
     const container = document.getElementById('tarotContainer');
     const spreadNames = { single: '单张牌', three: '三张牌', celtic: '凯尔特十字', relationship: '关系牌阵' };
     const total = this.allCards.length;
-    const radius = 160;
+    const isMobile = window.innerWidth < 480;
+    const radius = isMobile ? 110 : 160;
+    const ringMargin = isMobile ? 120 : 180;
 
     container.innerHTML = `
       
@@ -111,7 +113,7 @@ const TarotEngine = {
         <p class="tarot-subtitle">牌组正在为你准备……</p>
       </div>
       <div class="shuffle-stage">
-        <div class="shuffle-ring" id="shuffleRing">
+        <div class="shuffle-ring" id="shuffleRing" style="margin:${ringMargin}px 0">
           ${this.allCards.map((card, i) => {
             const angle = (360 / total) * i;
             const rad = (angle * Math.PI) / 180;
