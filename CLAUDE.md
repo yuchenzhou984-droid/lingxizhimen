@@ -1,7 +1,7 @@
 # 魔法女巫网站 - CLAUDE.md
 
 ## 项目简介
-「灵汐之门」是一个面向12-45岁女性、主题为魔法女巫的纯静态网站。包含女巫类型测试、魔杖定制、塔罗占卜、能量壁纸四大功能。部署于Gitee Pages，零预算，全中文。
+「灵汐之门」是一个面向12-45岁女性、主题为魔法女巫的纯静态网站。包含女巫类型测试、魔杖定制、塔罗占卜三大功能。部署于GitHub Pages + Cloudflare CDN，域名 lingxizhimen.cn，零预算，全中文。
 
 ## 核心约束
 - **零预算**：不使用任何付费服务/API/字体/图片
@@ -19,6 +19,14 @@
 | 设计规范 | `docs/设计规范.md` | 视觉风格、配色、字体、组件规范 |
 | 执行步骤 | `docs/执行步骤.md` | 分阶段执行计划及进度 |
 | 开发日志 | `开发日志/YYYY-MM-DD.md` | 每日开发记录 |
+
+## 部署信息
+- **平台**：GitHub Pages（yuchenzhou984-droid/lingxizhimen）
+- **域名**：lingxizhimen.cn（阿里云注册）
+- **CDN**：Cloudflare（DNS: clarissa.ns.cloudflare.com / huxley.ns.cloudflare.com）
+- **SSL**：Cloudflare Full 模式
+- **更新方式**：`git push origin main` → 自动构建部署
+- **缓存清理**：Cloudflare → Caching → Purge Everything
 
 ## 工作约定
 - 先确认需求，再编写代码
