@@ -70,10 +70,10 @@ const TEST1_QUESTIONS = [
     type: 'personality',
     text: '每个人都会迷路——那种突然不知道自己是谁、该往哪走的时刻。什么最能让你重新找到坐标？',
     options: [
-      { text: '做事。任何具体的事都行，行动会把我拉出来。', scores: { fire: 2, earth: 1 } },
-      { text: '安静。一个人呆着，写字冥想看窗外。答案会浮上来。', scores: { water: 2, darkmoon: 1 } },
-      { text: '对话。找人聊天、看新书、听故事。新视角吹散迷雾。', scores: { wind: 2, lightheal: 1 } },
-      { text: '秩序。回到日常，按时起床完成小事。节奏就是锚。', scores: { earth: 2, water: 1 } }
+      { text: '做事。任何具体的事都行。', scores: { fire: 2, earth: 1 } },
+      { text: '安静。一个人呆着，让答案自己浮上来。', scores: { water: 2, darkmoon: 1 } },
+      { text: '对话。找人聊天、看书、听故事。', scores: { wind: 2, lightheal: 1 } },
+      { text: '秩序。回到日常节奏，做好每件小事。', scores: { earth: 2, water: 1 } }
     ]
   },
   {
