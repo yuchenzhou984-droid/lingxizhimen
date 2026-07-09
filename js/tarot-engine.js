@@ -337,7 +337,7 @@ const TarotEngine = {
               </div>
             </div>
           </div>
-          <p class="reading-closing">纸牌只是一面剔透的镜子，拂去镜面尘埃，那些关于爱、勇气与智慧的答案，其实早已静静写在你一呼一吸的温热里。</p>
+          <p class="reading-closing">纸牌只是镜子，照见的始终是你自己。</p>
           <div style="text-align:center;margin-top:var(--space-lg)">
             <button class="btn" onclick="TarotEngine.init()">重新占卜</button>
           </div>
@@ -351,7 +351,7 @@ const TarotEngine = {
           <div class="card engraved-border">
             <p class="overall-text">${summary}</p>
           </div>
-          <p class="reading-closing">纸牌只是一面剔透的镜子，拂去镜面尘埃，那些关于爱、勇气与智慧的答案，其实早已静静写在你一呼一吸的温热里。</p>
+          <p class="reading-closing">纸牌只是镜子，照见的始终是你自己。</p>
           <div style="text-align:center;margin-top:var(--space-lg)">
             <button class="btn" onclick="TarotEngine.init()">重新占卜</button>
           </div>
