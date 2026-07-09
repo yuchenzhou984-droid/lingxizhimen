@@ -217,6 +217,13 @@
   background: rgba(232, 213, 183, 0.08);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
+
+@media (max-width: 768px) {
+  .home-entry {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+}
   border: 1px solid rgba(232, 213, 183, 0.18);
   border-radius: var(--radius-md);
   color: var(--text-primary);
