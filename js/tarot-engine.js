@@ -559,14 +559,17 @@ const TarotEngine = {
   readCeltic(cards) {
     this.saveCurrentReading(cards);
     const core = cards[0], block = cards[1], root = cards[2];
-    const outcome = cards[9];
+    const pastFar = cards[3], pastNear = cards[4], near = cards[5];
+    const self = cards[6], env = cards[7], hope = cards[8], outcome = cards[9];
 
     const readings = [
-      `凯尔特十字的十张牌围成了一个完整的圆。圆心是「${core.name}」，${core.meaning.split('。')[0]}。横在面前的是「${block.name}」，而最深处「${root.name}」一直在默默支撑。过去与未来在十字的两翼交织，你的状态和周围的环境共同编织着此刻的画面。最终，「${outcome.name}」指向了能量汇聚的方向。这不是判决，只是此刻所有力量自然流动的轨迹——你可以顺着走，也可以在下一个路口转弯。`,
-      `十张牌从不同方向照亮了同一个问题。「${core.name}」是你问题的核心，「${outcome.name}」是此刻能量指向的答案。中间的过程——那些阻碍、过往的根基、近处的过去和即将到来的影响——都在轻声告诉你：你的处境比你以为的更立体。每一张牌都是一面小镜子，照出你不同角度的样子。合在一起，它们不是要给你一个标准答案，而是让你看见全景之后，自己做出选择。`
+      `凯尔特十字为你展开了一幅完整的星图。圆心是「${core.name}」，${core.meaning.split('。')[0]}。这颗石子投入了你此刻的水面，所有的涟漪都从它散开。横在涟漪路径上的「${block.name}」并非敌人，${block.meaning.split('。')[0]}。它更像一面挡在你面前的镜子，要你低头看一眼，或许答案正好藏在被挡住的角落。在这一切的底部，「${root.name}」安静地成为你的地基，${root.meaning.split('。')[0]}。有些事你很久不曾想起，却依然在深处托着今天的你。`,
+      `回过头看，遥远的「${pastFar.name}」和近处的「${pastNear.name}」交织成了你今日站立的土地。${pastFar.meaning.split('。')[0]}，如同已经退远的潮水；而${pastNear.meaning.split('。')[0]}，余温犹在。两段过去同时给了你今天的位置，一远一近，一轻一重。不久后「${near.name}」会来到你面前，${near.meaning.split('。')[0]}。它已经在路上了，带着它的消息向你走来。`,
+      `你此刻以「${self.name}」的姿态应对这一切。${self.meaning.split('。')[0]}。而围绕在你身边的世界，正被「${env.name}」的色调浸染，${env.meaning.split('。')[0]}。内外之间或许有拉扯，但那种张力本身也是一种提醒：你在哪里，世界在哪里。你心底最柔软也最诚实的角落，栖息着「${hope.name}」。${hope.meaning.split('。')[0]}。希望和恐惧常常共用一张面孔，而能同时容下这两种感受的，正是一颗真实跳动着的心。`,
+      `最终，这一切汇聚到「${outcome.name}」。${outcome.meaning.split('。')[0]}。它不是写好的句号，更像是此刻所有力量自然汇流之后，为你指出的一条河道的走向。你可以沿着水流前行，也可以在下一个弯道处划向对岸。牌给了你一张地图，握桨的人始终是你自己。`
     ];
 
-    return this.pick('cI', readings);
+    return readings.join('\n\n');
   },
 
   readRelationship(cards) {
