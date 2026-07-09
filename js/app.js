@@ -35,6 +35,7 @@ function setupSound() {
   btn.addEventListener('click', () => {
     if (audio.muted) {
       audio.muted = false;
+      audio.play().catch(() => {});
       btn.classList.remove('muted');
       btn.title = '关闭声音';
       tip.textContent = '点击关闭声音';
