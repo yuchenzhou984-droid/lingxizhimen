@@ -7,7 +7,7 @@ const TEST1_QUESTIONS = [
       { text: '点火把，径直深入。森林不会等犹豫的人。', scores: { fire: 2, wind: 1 } },
       { text: '找一棵古树靠着坐下，用身体感受森林能量。', scores: { earth: 2, water: 1 } },
       { text: '蹲下来观察足迹和断枝，分析最安全的路径。', scores: { wind: 2, earth: 1 } },
-      { text: '找一棵最老的树靠着坐下，让森林能量流过身体。', scores: { earth: 2, water: 1 } }
+      { text: '找一棵最老的树靠着坐下，感受森林能量流过身体。', scores: { earth: 2, water: 1 } }
     ]
   },
   {
@@ -48,10 +48,10 @@ const TEST1_QUESTIONS = [
     type: 'situational',
     text: '你的魔法导师是一位话很少的老女巫。一个雨夜，她把空白的羊皮咒语书放在你面前。她说："第一道咒语不是学来的，是从骨头里长出来的。写下来。"你写下了第一道咒语：',
     options: [
-      { text: '打破停滞的咒语，让事物重新流动。', scores: { fire: 2, darkmoon: 1 } },
-      { text: '照见真实的咒语，让隐藏的情感浮现。', scores: { water: 2, lightheal: 1 } },
+      { text: '打破停滞的咒语，令事物重新流动。', scores: { fire: 2, darkmoon: 1 } },
+      { text: '照见真实的咒语，使隐藏的情感浮现。', scores: { water: 2, lightheal: 1 } },
       { text: '守护的咒语，织起无形的屏障。', scores: { earth: 2, fire: 1 } },
-      { text: '抚平创伤的咒语，让愈合从裂缝开始。', scores: { lightheal: 2, water: 1 } }
+      { text: '抚平创伤的咒语，使愈合从裂缝开始。', scores: { lightheal: 2, water: 1 } }
     ]
   },
   {
@@ -71,7 +71,7 @@ const TEST1_QUESTIONS = [
     text: '每个人都有迷茫的时候，什么最能帮你走出迷茫？',
     options: [
       { text: '做事。任何具体的事都行。', scores: { fire: 2, earth: 1 } },
-      { text: '安静。一个人呆着，让答案自己浮上来。', scores: { water: 2, darkmoon: 1 } },
+      { text: '安静。一个人呆着，等答案自己浮上来。', scores: { water: 2, darkmoon: 1 } },
       { text: '对话。找人聊天、看书、听故事。', scores: { wind: 2, lightheal: 1 } },
       { text: '秩序。回到日常节奏，做好每件小事。', scores: { earth: 2, water: 1 } }
     ]
@@ -150,18 +150,18 @@ const TEST2_QUESTIONS = [
   {
     id: 2,
     type: 'situational',
-    text: '修炼室里，你第一次尝试"感知之触"——用掌心探查物体本质。面前四件物品盖着布，其中一件让你掌心产生了最强烈的反应。你感受到什么？',
+    text: '修炼室里，你第一次尝试"感知之触"——用掌心探查物体本质。面前四件物品盖着布，其中一件使你掌心产生了最强烈的反应。你感受到什么？',
     options: [
       { text: '掌心像被火舌舔了一下，灼热窜到指尖。', scores: { blaze: 2, clarity: 1 } },
       { text: '手心湿润微凉，像浸入看不见的水，在流入它。', scores: { flow: 2, depth: 1 } },
-      { text: '掌根传来沉稳的钝重感，像按住土里很久的石头，让人安心。', scores: { solid: 2, radiance: 1 } },
+      { text: '掌根传来沉稳的钝重感，像按住土里很久的石头，令人安心。', scores: { solid: 2, radiance: 1 } },
       { text: '手心变暖了，像冬日靠近壁炉。能量和那件东西轻轻共振。', scores: { radiance: 2, flow: 1 } }
     ]
   },
   {
     id: 3,
     type: 'situational',
-    text: '在堆满魔杖原料的储藏室，你蒙上眼睛，只凭双手寻找那件"属于你"的装饰物。手指掠过木架和丝绒托盘，最后在一件东西上停住了。让你停下的，是哪种触感？',
+    text: '在堆满魔杖原料的储藏室，你蒙上眼睛，只凭双手寻找那件"属于你"的装饰物。手指掠过木架和丝绒托盘，最后在一件东西上停住了。使你停下的，是哪种触感？',
     options: [
       { text: '一根带着温度的细藤蔓，像微烫的血管在搏动。', scores: { blaze: 2, solid: 1 } },
       { text: '三颗圆润的银铃，指尖一碰发出轻响，像泉水滴落石板。', scores: { flow: 2, radiance: 1 } },
@@ -175,7 +175,7 @@ const TEST2_QUESTIONS = [
     text: '制作魔杖的最后一步：注入生命力。祝圣方式不是学来的，是身体自己知道的。双手握住半成品的魔杖、闭上眼，身体最自然地想做什么？',
     options: [
       { text: '低声吟唱。声音从胸腔涌出，带着热度的节奏，像鼓点像火焰。', scores: { blaze: 2, depth: 1 } },
-      { text: '把魔杖贴在心口，让它贴着心跳。不念咒也不动作，只是等。', scores: { flow: 2, solid: 1 } },
+      { text: '把魔杖贴在心口，使它贴着心跳。不念咒也不动作，只是等。', scores: { flow: 2, solid: 1 } },
       { text: '推开窗，把魔杖举到夜风中。不是你在注入，是风在替你写。', scores: { clarity: 2, flow: 1 } },
       { text: '熄掉所有灯，在黑暗中手掌贴着魔杖慢慢滑过。有东西在流动。', scores: { depth: 2, radiance: 1 } }
     ]
@@ -183,7 +183,7 @@ const TEST2_QUESTIONS = [
   {
     id: 5,
     type: 'situational',
-    text: '导师递给你一根素木魔杖，让你对着烛火试一个最基础的法术——让它微微晃动。你接过魔杖，最自然的握持和挥动方式是？',
+    text: '导师递给你一根素木魔杖，要你对着烛火试一个最基础的法术——使它微微晃动。你接过魔杖，最自然的握持和挥动方式是？',
     options: [
       { text: '短促有力的一挑。手腕向内快速上挑，烛火猛地蹿高。', scores: { blaze: 2, clarity: 1 } },
       { text: '缓慢连续的一个弧。从下往上像划桨，烛火轻轻摇曳。', scores: { flow: 2, radiance: 1 } },
