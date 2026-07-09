@@ -37,10 +37,10 @@ const TEST1_QUESTIONS = [
     type: 'personality',
     text: '想一想你最亲近的朋友。在他们眼中，你通常是那个……？',
     options: [
-      { text: '把大家从想变成做的人。有你在，计划不会停在纸上。', scores: { fire: 2, wind: 1 } },
-      { text: '安静听完诉说的人。不打断不评判，听完你自己就找到了答案。', scores: { water: 2, lightheal: 1 } },
-      { text: '不拐弯抹角的人。别人不敢说的，你一句话戳穿。', scores: { darkmoon: 2, wind: 1 } },
-      { text: '风暴中不会乱的人。你在，大家就有锚。', scores: { earth: 2, lightheal: 1 } }
+      { text: '把大家从想变成做的人。', scores: { fire: 2, wind: 1 } },
+      { text: '安静听完诉说的人。', scores: { water: 2, lightheal: 1 } },
+      { text: '不拐弯抹角的人。', scores: { darkmoon: 2, wind: 1 } },
+      { text: '风暴中不会乱的人。', scores: { earth: 2, lightheal: 1 } }
     ]
   },
   {
