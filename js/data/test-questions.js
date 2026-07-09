@@ -13,7 +13,7 @@ const TEST1_QUESTIONS = [
   {
     id: 2,
     type: 'personality',
-    text: '当面临一个会让生活转向的重要决定时，你内心深处最信任什么？',
+    text: '当面临一个重要决定时，你内心深处最信任什么？',
     options: [
       { text: '行动力。先迈出一步，错了再调整。', scores: { fire: 2, earth: 1 } },
       { text: '直觉。身体和情绪比大脑更早知道答案。', scores: { water: 2, lightheal: 1 } },
