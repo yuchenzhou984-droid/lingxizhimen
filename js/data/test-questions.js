@@ -68,7 +68,7 @@ const TEST1_QUESTIONS = [
   {
     id: 7,
     type: 'personality',
-    text: '每个人都会迷路——那种突然不知道自己是谁、该往哪走的时刻。什么最能让你重新找到坐标？',
+    text: '每个人都有迷茫的时候，什么最能帮你走出迷茫？',
     options: [
       { text: '做事。任何具体的事都行。', scores: { fire: 2, earth: 1 } },
       { text: '安静。一个人呆着，让答案自己浮上来。', scores: { water: 2, darkmoon: 1 } },
@@ -112,7 +112,7 @@ const TEST1_QUESTIONS = [
   {
     id: 11,
     type: 'situational',
-    text: '雨夜。敲门声轻得差点以为是雨打门板。门口站着一个陌生旅人——斗篷湿透，帽檐压低。他抬手扶帽檐时，你注意到他手背上有暗色纹路，从皮肤下渗出，正在扩散。',
+    text: '雨夜，有轻轻的敲门声传来。门口站着一个陌生旅人——斗篷湿透，帽檐压低。他抬手扶帽檐时，你注意到他手背上有暗色纹路从皮肤下渗出，正在扩散。',
     options: [
       { text: '请他进屋，同时在门框画保护咒。好客不等于没有界限。', scores: { fire: 2, earth: 1 } },
       { text: '先注视他的眼睛。嘴可以说谎，眼睛骗不了人。', scores: { water: 2, darkmoon: 1 } },
