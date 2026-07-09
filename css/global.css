@@ -20,7 +20,7 @@ html {
 }
 
 body {
-  font-family: 'LiyuShoushu', var(--font-sans);
+  font-family: var(--font-sans);
   background: #0a0608;
   color: var(--text-primary);
   line-height: 1.7;
@@ -28,6 +28,10 @@ body {
   min-height: 100dvh;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
+}
+
+body.mac-font {
+  font-family: 'LiyuShoushu', var(--font-sans);
 }
 
 /* 星空背景 */

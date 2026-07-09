@@ -2,6 +2,9 @@ let homeInitialized = false;
 let fadeOutDone = false;
 
 document.addEventListener('DOMContentLoaded', () => {
+  if (/Mac|iPhone|iPad|iPod/.test(navigator.platform || navigator.userAgent)) {
+    document.body.classList.add('mac-font');
+  }
   setupSound();
   setupVideo();
   setupCardTilt();
