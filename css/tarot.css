@@ -104,7 +104,7 @@
   height: 66px;
   margin-left: -22px;
   margin-top: -33px;
-  background: url('../塔罗背景图.png') center / cover no-repeat;
+  background: url('../塔罗背景图.webp') center / cover no-repeat;
   border: 1px solid rgba(232,213,183,0.2);
   border-radius: 2px;
   display: flex;
@@ -170,7 +170,7 @@
   cursor: pointer;
   transition: all 0.25s ease;
   -webkit-tap-highlight-color: transparent;
-  background: url('../塔罗背景图.png') center / cover no-repeat;
+  background: url('../塔罗背景图.webp') center / cover no-repeat;
   border: 1px solid rgba(232,213,183,0.15);
 }
 
@@ -209,7 +209,7 @@
 
 .deck-card-selected {
   border-color: var(--accent-gold);
-  background: url('../塔罗背景图.png') center / cover no-repeat;
+  background: url('../塔罗背景图.webp') center / cover no-repeat;
   box-shadow: 0 0 8px rgba(232,213,183,0.08);
 }
 
