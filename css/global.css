@@ -13,8 +13,14 @@ html {
   background: transparent;
 }
 
+@font-face {
+  font-family: 'LiyuShoushu';
+  src: url('../LiyuShoushu.woff2') format('woff2');
+  font-display: swap;
+}
+
 body {
-  font-family: var(--font-sans);
+  font-family: 'LiyuShoushu', var(--font-sans);
   background: #0a0608;
   color: var(--text-primary);
   line-height: 1.7;
