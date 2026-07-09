@@ -183,6 +183,7 @@ body {
   border: 1px solid rgba(232,213,183,0.1);
   border-radius: var(--radius-sm);
   color: var(--text-primary);
+  font-family: 'LiyuShoushu', var(--font-sans);
   font-size: 0.95rem;
   line-height: 1.6;
   cursor: pointer;
