@@ -104,15 +104,16 @@
   height: 66px;
   margin-left: -22px;
   margin-top: -33px;
-  background: url('../塔罗背景图.webp') center / cover no-repeat;
-  border: 1px solid rgba(232,213,183,0.2);
-  border-radius: 2px;
+  background: rgba(30, 18, 50, 0.8);
+  border: 1px solid rgba(232,213,183,0.5);
+  border-radius: 3px;
   display: flex;
   align-items: center;
   justify-content: center;
   transform: translate(var(--sx), var(--sy)) rotate(var(--sa));
   animation: shuffleCardAppear 0.4s ease-out forwards;
   opacity: 0;
+  box-shadow: 0 0 6px rgba(232,213,183,0.15), inset 0 0 6px rgba(232,213,183,0.06);
 }
 
 @keyframes shuffleCardAppear {
@@ -123,7 +124,7 @@
 .shuffle-card-icon {
   font-size: 0.7rem;
   color: var(--accent-gold);
-  opacity: 0.4;
+  opacity: 0.7;
 }
 
 .shuffle-hint {
