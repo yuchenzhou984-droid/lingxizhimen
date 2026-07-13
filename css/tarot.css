@@ -544,3 +544,95 @@
 .fade-in {
   animation: fadeIn var(--transition-slow) ease;
 }
+
+/* ========== 逐张牌解读 ========== */
+
+.position-readings {
+  margin: var(--space-lg) 0;
+}
+
+.position-reading {
+  margin-bottom: var(--space-lg);
+  padding-bottom: var(--space-md);
+  border-bottom: 1px solid rgba(232,213,183,0.08);
+}
+
+.position-reading:last-of-type {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.position-header {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-md);
+}
+
+.position-label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--accent-purple);
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+}
+
+.position-card-name {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  color: var(--accent-gold);
+  letter-spacing: 0.06em;
+}
+
+.celtic-group-subtitle {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  letter-spacing: 0.06em;
+  margin-bottom: var(--space-sm);
+  margin-top: -6px;
+}
+
+.detail-section {
+  margin-bottom: var(--space-sm);
+}
+
+.detail-label {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--text-secondary);
+  letter-spacing: 0.1em;
+  display: block;
+  margin-bottom: 2px;
+}
+
+.detail-text {
+  font-size: 0.9rem;
+  line-height: 1.9;
+  color: var(--text-primary);
+}
+
+.overall-intro,
+.overall-outro {
+  margin-bottom: var(--space-lg);
+}
+
+.overall-intro p,
+.overall-outro p {
+  font-size: 0.95rem;
+  line-height: 2;
+  color: var(--text-primary);
+}
+
+.cross-refs {
+  margin: var(--space-md) 0 var(--space-lg);
+  padding: var(--space-md);
+  background: rgba(155,89,182,0.06);
+  border-left: 2px solid var(--accent-purple);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+
+.cross-refs p {
+  font-size: 0.85rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+}
